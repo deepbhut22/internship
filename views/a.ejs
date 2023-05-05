@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #191d28;
+            color: white;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        table{
+            text-align: center;
+            width: 100%;
+            font-size: larger;
+        }
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+        }
+        li{
+            list-style-type: none;
+            display: inline;
+        }
+        #logo{
+            padding-left: 50px;
+        }
+        .h{
+            text-align: center;
+        }
+        .h>h2{
+            color: gray;
+        }
+        .fixed{
+            display: flex;
+            justify-content: space-around;
+        }
+        .fixed>div{
+            text-align: center;
+        }
+        .big{
+            font-size: 40px;
+        }
+        .big>p{
+            font-size: small;
+        }
+        .big>h1{
+            margin: 0;
+            
+        }
+        footer{
+            display: flex;
+            justify-content: space-between;
+        }
+        th{
+            color: gray;
+        }
+        button{
+            background-color: skyblue;
+            margin-top: 30px;
+            margin-left: 30px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function fun(){
+            location.href = "telegram.com";
+        }
+    </script>
+    <div class="nav">
+        <h1 id="logo">HODLINFO</h1>
+        <div class="innav">
+            <button onclick="fun()">telegram</button>
+        </div>
+    </div>
+    <div class="h">
+        <h2>best price to trade</h2>
+    </div>
+    <div class="fixed">
+        <div class="first">
+            <h1>0.33%</h1>
+            <p>5 mins</p>
+        </div>
+        <div class="first">
+            <h1>0.68%</h1>
+            <p>1 hour</p>
+        </div>
+        <div class="big">
+            <h1>₹ 26,95,533</h1>
+            <p>Average BTC/INR net price including commission</p>
+        </div>
+        <div class="first">
+            <h1>0.33%</h1>
+            <p>5 mins</p>
+        </div>
+        <div class="first">
+            <h1>0.33%</h1>
+            <p>5 mins</p>
+        </div>
+    </div>
+    <table cellspacing="10px" cellpadding="10px">
+        <tr>
+            <th>#</th>
+            <th>name</th>
+            <th>last</th>
+            <th>buy / sell</th>
+            <th>volume</th>
+            <th>base_unit</th>
+        </tr>
+    
+    <% for(let i=0 ; i<10; i++) {%>
+        <tr>
+            <td><%= i+1 %></td>
+            <td><%= obj[i].name %></td>
+            <td><%= obj[i].last %></td>
+            <td><%= obj[i].buy %> / <%= obj[i].sell %></td>
+            <td><%= obj[i].volume %></td>
+            <td><%= obj[i].base_unit %></td>
+        </tr>
+    <%}%>
+    </table>
+    <footer>
+        <p>copyright@ 2019</p>
+        <p><a href="#">support</a></p>
+    </footer>
+</body>
+</html>
